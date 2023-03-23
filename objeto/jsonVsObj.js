@@ -125,6 +125,122 @@
  * 
  * See the link: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
  * 
+ * JSON vs XML
+ * 
+ * Both JSON and XML can be used to receive data from a web server.
+ * The following JSON and XML examples both define an employees object, with an array of 3 employees:
+ * 
+ * JSON Example
+ * 
+ * {"employees":[
+ *   { "firstName":"John", "lastName":"Doe" },
+ *   { "firstName":"Anna", "lastName":"Smith" },
+ *   { "firstName":"Peter", "lastName":"Jones" }
+ * ]}
+ * 
+ * XML Example
+ * 
+ * <employees>
+ *   <employee>
+ *     <firstName>John</firstName> <lastName>Doe</lastName>
+ *   </employee>
+ *   <employee>
+ *     <firstName>Anna</firstName> <lastName>Smith</lastName>
+ *   </employee>
+ *   <employee>
+ *     <firstName>Peter</firstName> <lastName>Jones</lastName>
+ *   </employee>
+ * </employees>
+ * 
+ * JSON is Like XML Because
+ * Both JSON and XML are "self describing" (human readable)
+ * Both JSON and XML are hierarchical (values within values)
+ * Both JSON and XML can be parsed and used by lots of programming languages
+ * Both JSON and XML can be fetched with an XMLHttpRequest
+ * 
+ * JSON is Unlike XML Because
+ * JSON doesn't use end tag
+ * JSON is shorter
+ * JSON is quicker to read and write
+ * JSON can use arrays
+ * 
+ * The biggest difference is:
+ * XML has to be parsed with an XML parser. JSON can be parsed by a standard JavaScript function.
+ * 
+ * Why JSON is Better Than XML
+ * 
+ * XML is much more difficult to parse than JSON.
+ * JSON is parsed into a ready-to-use JavaScript object.
+ * 
+ * For AJAX applications, JSON is faster and easier than XML:
+ * 
+ * Using XML
+ * Fetch an XML document
+ * Use the XML DOM to loop through the document
+ * Extract values and store in variables
+ * 
+ * Using JSON
+ * Fetch a JSON string
+ * JSON.Parse the JSON string
+ * 
+ * JSON Data Types
+ * 
+ * Valid Data Types
+ * In JSON, values must be one of the following data types:
+ * a string
+ * a number
+ * an object (JSON object)
+ * an array
+ * a boolean
+ * null
+ * 
+ * JSON values cannot be one of the following data types:
+ * a function
+ * a date
+ * undefined
+ * 
+ * JSON Strings
+ * Strings in JSON must be written in double quotes.
+ * 
+ * Example
+ * {"name":"John"}
+ * 
+ * JSON Numbers
+ * Numbers in JSON must be an integer or a floating point.
+ * 
+ * Example
+ * {"age":30}
+ * 
+ * JSON Objects
+ * Values in JSON can be objects.
+ * 
+ * Example
+ * {
+ * "employee":{"name":"John", "age":30, "city":"New York"}
+ * }
+ * 
+ * Objects as values in JSON must follow the JSON syntax.
+ * 
+ * JSON Arrays
+ * Values in JSON can be arrays.
+ * 
+ * Example
+ * {
+ * "employees":["John", "Anna", "Peter"]
+ * }
+ * 
+ * JSON Booleans
+ * Values in JSON can be true/false.
+ * 
+ * Example
+ * {"sale":true}
+ * 
+ * JSON null
+ * Values in JSON can be null.
+ * 
+ * Example
+ * {"middlename":null}
+ * 
  * 
  */
 
