@@ -8,7 +8,7 @@
  *? Example - Parsing JSON
  * Imagine we received this text from a web server:
  * 
- * '{"name":"John", "age":30, "city":"New York"}'
+ ** '{"name":"John", "age":30, "city":"New York"}'
  *TODO: Use the JavaScript function JSON.parse() to convert text into a JavaScript object:
  */
 

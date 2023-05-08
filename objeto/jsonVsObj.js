@@ -15,8 +15,8 @@
  * 
  ** The JSON format was originally specified by Douglas Crockford.
  * 
- * JavaScript has a built in function for converting JSON strings into JavaScript objects:
- * JSON.parse()
+ ** JavaScript has a built in function for converting JSON strings into JavaScript objects:
+ *TODO: JSON.parse()
  * 
  ** JavaScript also has a built in function for converting an object into a JSON string:
  *TODO: JSON.stringify()
@@ -36,8 +36,8 @@
  *? JSON Syntax Rules
  ** JSON syntax is derived from JavaScript object notation syntax:
  ** Data is in name/value pairs
- ** Data is separated by commas
- ** Curly braces hold objects
+ ** Data is separated by commas ( , )
+ ** Curly braces hold objects 
  ** Square brackets hold arrays
  * 
  *? JSON Data - A Name and a Value
@@ -53,12 +53,12 @@
  * 
  ** In JSON, keys must be strings, written with double quotes:
  * 
- * JSON
+ *? JSON
  ** {"name":"John"}
  * 
  ** In JavaScript, keys can be strings, numbers, or identifier names:
  * 
- * JavaScript
+ *? JavaScript
  ** {name:"John"}
  * 
  *? JSON Values
@@ -244,19 +244,21 @@
  */
 
 const obj = {
-    a:1, 
-    b:2,
+    a: 1, 
+    b: 2,
     c: 3,
     soma() {
         return a + b + c
     }
 }
 
-//TODO: Converte o obj para formato JSON.
-console.log(JSON.stringify(obj)) // return {"a":1,"b":2,"c":3} - formato de texto JSON. OBS: Não retornará a função.
+//TODO: O método JSON.stringify() Converte o obj para formato JSON.
+console.log(JSON.stringify(obj)) // return {"a":1,"b":2,"c":3} - formato de texto JSON.
+//! OBS: Não retornará a função.
 
-console.log(JSON.parse('{"a": 1,"b": 2,"c": 3}')) // Return { a: 1, b: 2, c: 3 } - em formato de objeto.
-console.log(JSON.parse('{"a": 1,"b": "string","c": true, "d": {}, "e": []}')) //return { a: 1, b: 'string', c: true, d: {}, e: [] }
+// TODO: O método JSON.parse() converte o JSON para objeto JS
+console.log(JSON.parse('{"a": 1,"b": 2,"c": 3}')) //* Return { a: 1, b: 2, c: 3 } - em formato de objeto.
+console.log(JSON.parse('{"a": 1,"b": "string","c": true, "d": {}, "e": []}')) //* return { a: 1, b: 'string', c: true, d: {}, e: [] }
 
 /**
  *? Example - Parsing JSON
@@ -267,8 +269,8 @@ console.log(JSON.parse('{"a": 1,"b": "string","c": true, "d": {}, "e": []}')) //
 
 //TODO: Use the JavaScript function JSON.parse() to convert text into a JavaScript object:
 const pessoa = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
-console.log(pessoa)
-
+console.log(pessoa) //* Returns a JavaScript object { name: 'John', age: 30, city: 'New York' }
+ 
 /**
  *? Array as JSON
  * When using the JSON.parse() on a JSON derived from an array, 
@@ -276,7 +278,8 @@ console.log(pessoa)
  */
 const text = '["Ford", "BMW", "Audi", "Fiat"]';
 const myArr = JSON.parse(text);
-console.log(myArr)// return ["Ford", "BMW", "Audi", "Fiat"]
+console.log(myArr)//* return ["Ford", "BMW", "Audi", "Fiat"]
+console.log(typeof(myArr))
 
 /**
  *? Exceptions
@@ -304,47 +307,48 @@ console.log(obj2)
  * When receiving data from a web server, the data is always a string.
  * Parse the data with JSON.parse(), and the data becomes a JavaScript object.
  * 
- * Example - Parsing JSON
+ *? Example - Parsing JSON
  * Imagine we received this text from a web server:
  * '{"name":"John", "age":30, "city":"New York"}'
- * Use the JavaScript function JSON.parse() to convert text into a JavaScript object:
+ *TODO: Use the JavaScript function JSON.parse() to convert text into a JavaScript object:
  * 
  * const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
  * 
- * Make sure the text is in JSON format, or else you will get a syntax error
+ *! Make sure the text is in JSON format, or else you will get a syntax error
  * 
- * JSON Strings
+ *? JSON Strings
  * Strings in JSON must be written in double quotes.
  * Example
  * {"name":"John"}
  * 
- * JSON Numbers
+ *? JSON Numbers
  * Numbers in JSON must be an integer or a floating point.
  * Example
  * {"age":30}
  * 
- * JSON Objects
+ *? JSON Objects
  * Values in JSON can be objects.
  * Example
  * {
  * "employee":{"name":"John", "age":30, "city":"New York"}
  * }
  * 
- * Objects as values in JSON must follow the JSON syntax.
+ *! Objects as values in JSON must follow the JSON syntax.
  * 
- /* JSON Arrays
+ /*
+ *? JSON Arrays
  * Values in JSON can be arrays.
  * Example
  * {
  * "employees":["John", "Anna", "Peter"]
  * }
  * /
- * JSON Booleans
+ *? JSON Booleans
  * Values in JSON can be true/false.
  * Example
  * {"sale":true}
  * 
- * JSON null
+ *? JSON null
  * Values in JSON can be null.
  * Example
  * {"middlename":null}
