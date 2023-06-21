@@ -30,6 +30,27 @@ pilotos.pop() // Remove o último elemento do array, neste caso o 'Massa'
 console.log(pilotos) // [ 'Vettel', 'Alonso', 'Raikknonen' ]
 
 /**
+ *? Array.prototype.push()
+ * 
+ * TODO See the links:
+ ** https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+ * 
+ ** https://www.w3schools.com/jsref/jsref_push.asp
+ * 
+ *? Resumo
+ * 
+ ** O método push() adiciona um ou mais elementos ao final de um array e retorna o novo comprimento desse array.
+ * 
+ *? Sintaxe
+ * 
+ ** arr.push(elemento1, ..., elementoN)
+ * 
+ */
+
+pilotos.push('Verstappen') // Adicionando 'Verstappen' ao final do array
+console.log(pilotos) // Return [ 'Vettel', 'Alonso', 'Raikknonen', 'Verstappen' ]
+
+/**
  * ? Array.prototype.shift()
  *
  * TODO: See the lins:
@@ -48,8 +69,7 @@ console.log(pilotos) // [ 'Vettel', 'Alonso', 'Raikknonen' ]
  */
 
  pilotos.shift() // Remove o primeiro elemento do array
- console.log(pilotos) // Return [ 'Alonso', 'Raikknonen' ]
-
+ console.log(pilotos) // Return [ 'Alonso', 'Raikknonen', 'Verstappen' ]
  /**
   * ? Array.prototype.unshift()
   * 
@@ -70,3 +90,57 @@ console.log(pilotos) // [ 'Vettel', 'Alonso', 'Raikknonen' ]
   ** arr.unshift([element1[, ...[, elementN]]])
   * 
   */
+
+pilotos.unshift('Hamilton') // Adicionando 'Hamilton' ao inicio do array del
+console.log(pilotos) // return [ 'Hamilton', 'Alonso', 'Raikknonen', 'Verstappen' ]
+
+/**
+ *? Array.prototype.splice()
+ * 
+ * TODO See the lins:
+ * 
+ ** https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+ * 
+ ** https://www.w3schools.com/jsref/jsref_splice.asp
+ * 
+ *? Resumo
+ * 
+ ** O método splice() altera o conteúdo de uma lista, adicionando novos elementos enquanto remove elementos antigos.
+ * 
+ *? Sintaxe
+ *  
+ ** array.splice(indice[, deleteCount[, elemento1[, ...[, elementoN]]])
+ ** array.splice(indice) // SpiderMonkey/Firefox extension
+ * 
+ */
+
+
+pilotos.splice(2, 0, 'Bottas', 'Massa') // Adicionando 'Bottas' e 'Massa' na lista a partir do indice [2]
+console.log(pilotos) // return [ 'Hamilton', 'Alonso', 'Bottas', 'Massa', 'Raikknonen', 'Verstappen' ]
+
+// remover
+pilotos.splice(3, 1) // remove o elemento que esta no indice [3]
+console.log(pilotos) // return [ 'Hamilton', 'Alonso', 'Bottas', 'Raikknonen', 'Verstappen' ]
+
+/**
+ *? Array.prototype.slice()
+ * 
+ * TODO: See the links:
+ * 
+ ** https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+ * 
+ ** https://www.w3schools.com/jsref/jsref_slice_array.asp
+ * 
+ *? Description:
+ * 
+ * O método slice() retorna uma cópia de parte de um array a partir de um subarray criado entre as 
+ * posições início e fim (fim não é incluído) de um array original. O Array original não é modificado.
+ * 
+ */ 
+
+const algunsPilotos1 = pilotos.slice(2) // Cria um novo array a partir do indice[2]
+console.log(algunsPilotos1) // return [ 'Bottas', 'Raikknonen', 'Verstappen' ]
+
+const algunsPilotos2 = pilotos.slice(1, 4) // Cria um novo array a partir do incide[1] e não inclui o indice[4]
+console.log(algunsPilotos2) // return [ 'Alonso', 'Bottas', 'Raikknonen' ]
+
